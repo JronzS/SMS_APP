@@ -29,7 +29,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        <form >
+        <form action="{% url 'send_bulk_notifications' %}" method="post">
             {% csrf_token %}
             <button class="btn btn-primary">Send SMS Notifications</button>
         </form>

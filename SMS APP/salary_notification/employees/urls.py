@@ -1,10 +1,7 @@
 from django.urls import path
-from .views import send_test_sms
-from .views import dashboard
-
+from . import views
 
 urlpatterns = [
-    # Other paths...
-    path('send-test-sms/', send_test_sms, name='send_test_sms'),
-     path('', dashboard, name='dashboard'),
+    path('', views.dashboard, name='dashboard'),
+    path('send-notifications/', views.send_bulk_notifications, name='send_bulk_notifications'),
 ]
