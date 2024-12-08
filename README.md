@@ -14,14 +14,6 @@ This is a simple Django-based web application for managing employee salary notif
     SMS API: Vonage (formerly Nexmo) for global SMS support
 
     Here’s a README.md file for your project that follows best practices for GitHub repositories. This document explains the purpose of the app, how to set it up, and how to send SMS notifications using the Vonage SMS API.
-Employee Salary Notification System 📲
-
-This is a simple Django-based web application for managing employee salary notifications. The system allows you to send salary notifications via SMS directly to employees' mobile phones using the Vonage SMS API, which is compatible with Philippine numbers.
-📋 Features
-
-    View employee details (name, phone number, bank account, salary) on a dashboard.
-    Send individual or bulk SMS notifications to employees.
-    Log each notification's status (Sent, Failed) for tracking purposes.
 
 🛠️ Tech Stack
 
