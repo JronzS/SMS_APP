@@ -13,13 +13,6 @@ This is a simple Django-based web application for managing employee salary notif
     Frontend: HTML, CSS (via Bootstrap 5)
     SMS API: Vonage (formerly Nexmo) for global SMS support
 
-    Here’s a README.md file for your project that follows best practices for GitHub repositories. This document explains the purpose of the app, how to set it up, and how to send SMS notifications using the Vonage SMS API.
-
-🛠️ Tech Stack
-
-    Backend: Django (Python)
-    Frontend: HTML, CSS (via Bootstrap 5)
-    SMS API: Vonage (formerly Nexmo) for global SMS support
 
 📦 Project Structure
 
