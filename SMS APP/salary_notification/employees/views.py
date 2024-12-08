@@ -4,9 +4,9 @@ from .models import Employee, SalaryNotification
 from twilio.rest import Client
 
 # Twilio Configuration
-TWILIO_SID = "ACaf90cef83cb654308749fec374c96e03"
-TWILIO_AUTH_TOKEN = "13097dde094440db8db39167b799adef"
-TWILIO_PHONE = "++1 775 368 2614" 
+TWILIO_SID = 'AC4ffd1392e40cc4fecdb906a9e357dd17'
+TWILIO_AUTH_TOKEN = '5265c3ca810c060987c723f79e71699f'
+TWILIO_PHONE = '+17856201858'
 
 def send_sms_notification(employee):
     client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
@@ -18,7 +18,10 @@ def send_sms_notification(employee):
         )
         return "Sent" if message.sid else "Failed"
     except Exception as e:
-        return str(e)
+        # Log the error for debugging
+        print(f"Error sending SMS to {employee.phone_number}: {e}")
+        return "Failed"
+
 
 def dashboard(request):
     employees = Employee.objects.all()
