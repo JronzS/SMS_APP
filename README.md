@@ -1,33 +1,38 @@
-Employee Salary Notification System 📲
+💸 Salary Notification System
 
-This is a simple Django-based web application for managing employee salary notifications. The system allows you to send salary notifications via SMS directly to employees' mobile phones using the Vonage SMS API, which is compatible with Philippine numbers.
-📋 Features
+This is a Django-based Salary Notification System that sends salary notifications to employees via SMS using Twilio API. It also features a simple web-based dashboard to view employee details and trigger SMS notifications for all employees.
+🚀 Features
 
-    View employee details (name, phone number, bank account, salary) on a dashboard.
-    Send individual or bulk SMS notifications to employees.
-    Log each notification's status (Sent, Failed) for tracking purposes.
+    📲 Send Salary Notifications via SMS
+    📋 View Employee Details (Name, Phone, Bank Account, Salary)
+    📡 Twilio Integration for seamless SMS delivery
+    📅 Track Notification Status (Sent, Failed) with timestamps
+    📈 Bulk Notification Sending (Send to all employees at once)
 
-🛠️ Tech Stack
+  🛠️ Usage Instructions
 
-    Backend: Django (Python)
-    Frontend: HTML, CSS (via Bootstrap 5)
-    SMS API: Vonage (formerly Nexmo) for global SMS support
+    Add Employees
+        Log in to the admin panel at http://127.0.0.1:8000/admin/
+        Add employee details (Name, Phone, Bank Account, Salary) in the Employee model.
 
+    Send SMS Notifications
+        Visit the dashboard at http://127.0.0.1:8000/
+        Click the Send SMS Notifications button to send bulk notifications to all employees.
+        The system will update the status of each SMS (Sent, Failed) in the SalaryNotification model.
 
-📦 Project Structure
+📚 Code Explanation
+1️⃣ Models
 
-project-folder/
-├── employees/
-│   ├── migrations/
-│   ├── templates/
-│   │    └── employees/
-│   │         └── dashboard.html
-│   ├── __init__.py
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── admin.py
-├── manage.py
-├── requirements.txt
-└── README.md
+    Employee: Contains employee details (name, phone, salary, etc.).
+    SalaryNotification: Tracks the status of SMS notifications sent to employees.
 
+2️⃣ Views
+
+    dashboard(): Renders the employee dashboard where employee information is displayed.
+    send_sms_notification(): Handles SMS sending logic using Twilio API.
+    send_bulk_notifications(): Sends SMS notifications to all employees and logs the status.
+
+3️⃣ Templates
+
+    dashboard.html: Contains a form to trigger the "Send Notifications" action.
+    It also displays a table of employees and their information.
